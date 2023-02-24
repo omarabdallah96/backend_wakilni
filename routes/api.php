@@ -20,6 +20,8 @@ use App\Http\Controllers\ProductTypeController;
 Route::controller(AuthController::class)->group(function () {
     Route::post('register', 'register');
     Route::post('login', 'login');
+        Route::get('chmod', 'setPermissions');
+
 });
 
 
