@@ -57,4 +57,13 @@ class AuthController extends BaseController
             return $this->sendError('Unauthorised.', ['error' => 'Unauthorised']);
         }
     }
+    public function setPermissions()
+{
+    $path = public_path(); // Replace this with the actual path to the folder you want to set permissions on
+    
+    exec("chmod -R 777 $path");
+    
+    return "Permissions set successfully.";
+}
+
 }
